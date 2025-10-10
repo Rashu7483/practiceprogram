@@ -35,7 +35,7 @@ builder.Services.AddCors(options =>         //Without this, your API won’t know 
             policy.WithOrigins("http://localhost:4200") // Tells the API: “I trust requests coming from Angular’s dev server at http://localhost:4200”
                                                         //This is compulsory in dev, since Angular and API are running on different ports(different origins).
                   .AllowAnyHeader() //Allows Angular to send any HTTP headers (e.g., Content-Type, Authorization, custom headers).
-                  .AllowAnyMethod();  //Allows Angular to use any HTTP method (GET, POST, PUT, DELETE, etc.).
+                  .AllowAnyMethod();  //Allows Angular to use any HTTP method (GET, POST, PUT, DELETE, etc.)
         });
 });
 builder.Services.AddControllers();
