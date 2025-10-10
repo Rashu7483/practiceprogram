@@ -11,6 +11,5 @@ namespace practice.Repositories
         public Task UpdateAsync(Product product);
         public Task DeleteAsync(int id);
 
-
     }
 }
