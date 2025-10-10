@@ -2,7 +2,7 @@
 {
     public class Orderdto
     {
-        public DateTime OrderDate { get; set; }
+        public DateTime OrderDate { get; set; } //dto
         public decimal TotalAmount { get; set; }
     }
 }
