@@ -5,6 +5,7 @@ using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using practice.Automapper;
 using practice.Data;
+//using practice.Kafka.Services;
 using practice.Repositories;
 using practice.Services;
 using Serilog;
@@ -108,7 +109,14 @@ builder.Services.AddSwaggerGen(c =>
     });
 });
 
+//builder.Services.AddSingleton<KafkaProducer>();
+//builder.Services.AddSingleton<KafkaConsumer>();
 var app = builder.Build();
+
+//// Start Kafka consumer in background
+//var kafkaConsumer = app.Services.GetRequiredService<KafkaConsumer>();
+//var cts = new CancellationTokenSource();
+//Task.Run(() => kafkaConsumer.StartConsumer(cts.Token));
 
 if (app.Environment.IsDevelopment())
 {
